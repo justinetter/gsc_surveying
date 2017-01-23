@@ -1,4 +1,11 @@
 class User < ActiveRecord::Base
+  validates_uniqueness_of :name
+  validates_presence_of :name, length: { minimum: 3 }
+  validates_presence_of :password, length: { minimum: 4 }
+  validates_confirmation_of :password
+
+  before_create :encrypt_password, :gen_auth_token
+  
   def update_token
     self.gen_auth_token
     self.save
@@ -10,10 +17,10 @@ class User < ActiveRecord::Base
     end while User.exists? auth_token: self.auth_token
   end
 
-  def self.authenticate name, passphrase
+  def self.authenticate name, password
     user = self.find_by_name name
-    # if user found and passphrase matches decrypted one saved in db
-    if user && user.passphrase == BCrypt::Engine.hash_secret(passphrase, user.salt)
+    # if user found and password matches decrypted one saved in db
+    if user && user.password == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
     else
       nil
@@ -21,14 +28,10 @@ class User < ActiveRecord::Base
   end
 
   private
-    def gen_unique_token
-      self.token = SecureRandom.urlsafe_base64
-    end
-
     def encrypt_password
-      if self.passphrase.present?
-        self.salt = BCrypt::Engine.generate_salt
-        self.passphrase = BCrypt::Engine.hash_secret(self.passphrase, self.salt)
+      if self.password.present?
+        self.password_salt = BCrypt::Engine.generate_salt
+        self.password = BCrypt::Engine.hash_secret(self.password, self.password_salt)
       end
     end
 end
