@@ -1,0 +1,124 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+$x_right_gap: 5px;
+$x_left_gap: 5px;
+
+@mixin card {
+  position: relative;
+  padding: 15px 7.5px;
+  background: white;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-bottom: 12.5px;
+  width: 94.5%;
+}
+
+@mixin corner_link {
+	font-size: 11px;
+	position: absolute;
+}
+
+@mixin standard_form_element {
+  width: 55%;
+  max-width: 275px;
+}
+
+html {
+	font-family: Helvetica;
+	background: black;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	color: black;
+}
+
+textarea {
+  width: 95%;
+  height: 75px;
+}
+
+::-webkit-input-placeholder {
+	font-size: 12.5px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-size: 12.5px;
+}
+
+.card {
+	@include card;
+}
+
+.top_right_link {
+	@include corner_link;
+	right: $x_right_gap;
+	top: 5px;
+}
+
+.top_left_link {
+	@include corner_link;
+	left: $x_left_gap;
+	top: 5px;
+}
+
+.bottom_right_link {
+	@include corner_link;
+	right: $x_right_gap;
+	bottom: 5px;
+}
+
+.bottom_left_link {
+	@include corner_link;
+	left: $x_left_gap;
+	bottom: 5px;
+}
+
+.standard_form_button {
+  @include standard_form_element;
+  height: 35px;
+  background: white;
+}
+
+.standard_text_field {
+  @include standard_form_element;
+  margin-bottom: 7.5px;
+  display: block;
+}
+
+.white_link {
+  color: white;
+}
+
+.dark_link {
+  color: rgb(175, 175, 175);
+}
+
+.small_dark_link {
+  color: rgb(175, 175, 175);
+  font-size: 12px;
+}
+
+.header_icon_link {
+  color: white;
+  font-size: 30px;
+}

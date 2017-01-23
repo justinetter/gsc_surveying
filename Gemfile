@@ -1,5 +1,16 @@
 source 'https://rubygems.org'
 
+# Use ActiveModel has_secure_password
+gem 'bcrypt'
+gem 'gpgme'
+
+# uploading images
+gem 'rmagick'
+gem 'carrierwave'
+gem 'remotipart'
+
+# fonts and glyphs
+gem 'font-awesome-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

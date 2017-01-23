@@ -1,3 +1,10 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#remember_me_check_box {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 13px;
+}

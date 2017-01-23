@@ -1,5 +1,7 @@
-<%= link_to "Register", new_user_path %>
-
-</br>
-
-<%= link_to "Log in", sessions_new_path %>
+<% unless current_user %>
+  <%= link_to "Register", new_user_path, class: :white_link %>
+  </br>
+  <%= link_to "Log in", sessions_new_path, class: :white_link %>
+<% else %>
+  You are signed in!
+<% end %>
