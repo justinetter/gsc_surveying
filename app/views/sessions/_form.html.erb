@@ -1,0 +1,23 @@
+<% unless current_user %>
+  <div class="card">
+	  <%= link_to "Haven't signed up yet?", new_user_path, class: :top_right_link if invited? %>
+	  
+	  <%= form_tag sessions_path do %>
+	    <div align="center">
+	      <p>
+		      <%= text_field_tag :login, nil, placeholder: "Username or Email", class: :standard_text_field %>
+		      <%= password_field_tag :password, nil, placeholder: "Password", class: :standard_text_field %>
+		    </p>
+		    <p>
+          <button type="submit" name="commit" class="standard_form_button">
+            <b>Log in <i class="fa fa-pencil"></i></b>
+          </button>
+        </p>
+		  </div>
+		  
+		  <div id="remember_me_check_box">
+			  Remember me <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+		  </div>
+	  <% end %>
+	</div>
+<% end %>

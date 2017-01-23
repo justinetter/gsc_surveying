@@ -1,0 +1,22 @@
+<div class="card">
+  <%= form_for(@user) do |f| %>
+  	<%= link_to "Already signed up?", sessions_new_path, class: :top_right_link %>
+
+    <div align="center">
+      <p>
+        <%= f.text_field :name, placeholder: "Username", class: :standard_text_field %>
+        <%= f.password_field :password, placeholder: "Password", class: :standard_text_field %>
+        <%= f.password_field :password_confirmation, placeholder: "Confirm password", class: :standard_text_field %>
+      </p>
+	    <p>
+        <button type="submit" name="commit" class="standard_form_button">
+	        <b>Sign up <i class="fa fa-pencil"></i></b>
+        </button>
+      </p>
+    </div>
+
+	  <div id="remember_me_check_box">
+		  Remember me <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+	  </div>
+  <% end %>
+</div>
