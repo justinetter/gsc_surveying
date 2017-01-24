@@ -15,3 +15,18 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore all local image uploads
+/public/uploads/*
+
+# Ignore bundle installs
+/Gemfile.lock
+
+# Ignore cache files
+._*
+
+
+# Ignore hidden files by default
+.*
+!.gitignore
+!.gitkeep
