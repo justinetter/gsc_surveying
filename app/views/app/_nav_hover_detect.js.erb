@@ -1,0 +1,6 @@
+function nav_hover_detect_<%= section_id %>() {
+  section = $("#<%= section_id %>");
+  if ($("#<%= section_id %>:hover").length != 0) {
+    section.after("<%=j render "app/menu_items", section_id: section_id %>");
+  }
+}

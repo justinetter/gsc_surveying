@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GSC Surveying</title>
+  <title>GSC Surveying, Inc.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= image_tag "mockup_map.jpg", class: :mockup_header %>
+<%= render "app/nav_bar" %>
 
 <%= yield %>
 

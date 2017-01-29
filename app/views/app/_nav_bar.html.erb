@@ -1,0 +1,17 @@
+
+<div class="nav_bar">
+  <div class="nav_sections">
+    <%= image_tag "small_logo.png", class: :nav_logo %>
+    <% for section in ["Services", "About Us", "Projects", "Clients", "Contact Us"] %>
+      <% section_id = section.downcase.gsub(" ", "/") + "_section" %>
+      <script>
+        <%= render "app/nav_hover_detect.js", section_id: section_id %>
+      </script>
+      <div class="nav_section" id="<%= section_id %>">
+        <%= section %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="nav_spacing"></div>

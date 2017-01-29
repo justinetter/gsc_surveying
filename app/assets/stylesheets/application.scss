@@ -130,3 +130,34 @@ textarea {
 .spacing {
   padding-bottom: 25px;
 }
+
+.nav_bar {
+  position: fixed;
+  background: white;
+  width: 100%;
+  height: 100px;
+  top: 0px;
+  left: 0px;
+}
+
+.nav_spacing {
+  height: 125px;
+}
+
+.nav_logo {
+  float: left;
+  height: 75px;
+  padding-top: 10px;
+  padding-left: 45px;
+  padding-right: 65px;
+}
+
+.nav_sections {
+}
+
+.nav_section {
+  float: left;
+  color: black;
+  width: 15%;
+  padding-top: 45px;
+}
