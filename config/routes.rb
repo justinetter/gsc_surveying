@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  
+  # welcome
+  get 'focus_to_section/:section_id', to: 'welcome#focus_to_section', as: 'focus_to_section'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

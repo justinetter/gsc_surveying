@@ -159,5 +159,17 @@ textarea {
   float: left;
   color: black;
   width: 15%;
+  height: 100px;
   padding-top: 45px;
+  text-align: center;
+}
+
+.nav_section:hover {
+  color: white;
+  background: black;
+}
+
+.section_part {
+  width: 100%;
+  height: 200px;
 }
