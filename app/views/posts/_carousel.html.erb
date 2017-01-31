@@ -1,3 +1,5 @@
 <div class="image_carousel">
-
+  <% for image in images %>
+    <%= image_tag image.image, class: :carousel_image %>
+  <% end %>
 </div>
