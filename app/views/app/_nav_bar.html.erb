@@ -1,15 +1,15 @@
 <div class="nav_bar">
-  <div class="nav_sections">
-    <%= image_tag "small_logo.png", class: :nav_logo %>
-    <% for section in ["Services", "About Us", "Projects", "Clients", "Contact Us"] %>
-      <% section_id = section.downcase.gsub(" ", "_") + "_section" %>
-      <%= link_to focus_to_section_path(section_id: section_id), remote: true do %>
-        <div class="nav_section">
+  <%= image_tag "small_logo.png", class: :nav_logo %>
+  <% for section in ["Services", "About Us", "Projects", "Clients", "Contact Us"] %>
+    <% section_id = section.downcase.gsub(" ", "_") + "_section" %>
+    <%= link_to focus_to_section_path(section_id: section_id), remote: true do %>
+      <div class="nav_section">
+        <div class="nav_section_text">
           <%= section %>
         </div>
-      <% end %>
+      </div>
     <% end %>
-  </div>
+  <% end %>
 </div>
 
 <div class="nav_spacing"></div>
