@@ -42,7 +42,7 @@ $x_left_gap: 5px;
 
 html {
 	font-family: Helvetica;
-	background: black;
+	background: LightGray;
 }
 
 a {
@@ -72,6 +72,7 @@ textarea {
   height: 65px;
   top: 0px;
   left: 0px;
+  z-index: 1;
 }
 
 .nav_spacing {
