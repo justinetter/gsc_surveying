@@ -1,5 +1,5 @@
 <div class="nav_bar">
-  <%= image_tag "small_logo.png", class: :nav_logo %>
+  <%= image_tag "logo.png", class: :nav_logo %>
   <% for section in ["Services", "About Us", "Projects", "Clients", "Contact Us"] %>
     <% section_id = section.downcase.gsub(" ", "_") + "_section" %>
     <%= link_to focus_to_section_path(section_id: section_id), remote: true do %>
