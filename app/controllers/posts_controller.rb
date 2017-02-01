@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  def carousel_scroll
+  end
+  
   def new
     @post = Post.new
   end

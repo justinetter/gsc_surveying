@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   
   # welcome
   get 'focus_to_section/:section_id', to: 'welcome#focus_to_section', as: 'focus_to_section'
+  get 'scroll_to_top', to: 'welcome#scroll_to_top', as: 'scroll_to_top'
+  
+  # posts
+  get 'carousel_scroll/:direction', to: 'posts#carousel_scroll', as: 'carousel_scroll'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

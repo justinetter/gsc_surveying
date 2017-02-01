@@ -1,5 +1,5 @@
 <div class="nav_bar">
-  <%= link_to root_url do %>
+  <%= link_to (@you_are_home ? scroll_to_top_path : root_url), remote: @you_are_home do %>
     <%= image_tag "logo.png", class: :nav_logo %>
   <% end %>
   <% for section in ["Services", "About Us", "Projects", "Clients", "Contact Us"] %>
