@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def carousel_scroll
+    @carousel_size = 4
     @direction = params[:direction]
     # steps up and down carousel_index
     cookies[:carousel_index] = if @direction.to_sym.eql? :right
@@ -8,13 +9,13 @@ class PostsController < ApplicationController
       cookies[:carousel_index] = cookies[:carousel_index].to_i - 1
     end
     # keeps within limits
-    if cookies[:carousel_index].to_i > Post.all.size
-      cookies[:carousel_index] = Post.all.size
+    if cookies[:carousel_index].to_i > Post.all.size - @carousel_size
+      cookies[:carousel_index] = Post.all.size - @carousel_size
     elsif cookies[:carousel_index].to_i < 0
       cookies[:carousel_index] = 0
     end
     # gets images
-    @images = Post.limit(4).offset(cookies[:carousel_index].to_i)
+    @images = Post.limit(@carousel_size).offset(cookies[:carousel_index].to_i)
     puts @images.first.id.to_s + " " + @images.last.id.to_s
   end
   
