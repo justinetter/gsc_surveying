@@ -1,24 +1,54 @@
 <%= image_tag "map.jpg", width: "100%" %>
 
 <div class="section_part" id="services_section">
-  Services
+ <h2> Services</h2>
 </div>
 
 <div class="section_part" id="about_us_section">
-  About Us
+ <h2 style="color:darkorange";> About Us</h2>
 </div>
 
 <div class="section_part" id="projects_section">
-  Projects
+  <h2 style="color:darkblue";>Projects</h2>
   <%= render "posts/carousel", images: Post.limit(4).offset(0) %>
 </div>
 
 <div class="section_part" id="clients_section">
-  Clients
+ <h2 style="color: darkorange";> Clients</h2>
 </div>
 
-<div class="section_part" id="contact_us_section">
-  Contact Us
+<div class="section_part" id="contact_us_section" >
+  <h2>Contact Us</h2>
+  <div class="company_emails">
+    <p style= font-size:18px;>
+      Greg S. Crowder, President
+      Registered Land Surveyor
+      greg@gscsurveying.com
+
+      Benjamin Andrews
+      ben@gscsurveying.com
+
+      Austin McCleery
+      austin@gscsurveying.com
+
+      Liz Carpenter Bayer, Office Manager
+      liz@gscsurveying.com
+    </p>
+  </div>
+  <div class= "facebook_icon">
+    <%= link_to "http://www.facebook.com" do %>
+      <%= image_tag "facebook.png", width: "40%" %>
+    <% end %>
+  </div>
+  <div class="twitter_icon">
+    <%= link_to "http://www.twitter.com" do %>
+      <%= image_tag "twitter.png", width: "40%" %>
+    <% end %>
+  </div>
+  
+  
+  
+  <div class="google_maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.7142925526628!2d-78.63260468473706!3d35.83148498015967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac58ea71c6eb91%3A0x6b3df7bae78983ea!2sGSC+Surveying+Inc!5e0!3m2!1sen!2sus!4v1485914436090" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 </div>
 
 <div align="center">

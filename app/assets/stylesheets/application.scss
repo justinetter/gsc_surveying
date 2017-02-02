@@ -76,7 +76,7 @@ textarea {
 }
 
 .nav_spacing {
-  height: 65px;
+  height: 100px;
 }
 
 .nav_logo {
@@ -170,4 +170,49 @@ textarea {
 
 .spacing {
   padding-bottom: 25px;
+}
+
+.google_maps {
+  position: absolute;
+  right: 100px;
+  bottom: 55px;
+}
+
+.facebook_icon {
+  position: absolute; 
+  right: 620px;
+  bottom: 255px;
+}
+
+.twitter_icon {
+  position: absolute;
+  right: 510px;
+  bottom: 255px;
+}
+
+.company_emails {
+  position: absolute;
+  width: 250px;
+  right: 580px;
+  bottom: 2px;
+}
+
+#services_section {
+  background-color: DarkOrange;
+}
+
+#about_us_section {
+  background-color: DarkBlue;
+}
+
+#projects_section {
+  background-color: DarkOrange;
+}
+
+#clients_section {
+  background-color: DarkBlue;
+}
+
+#contact_us_section { 
+  background-color: DarkOrange;
 }
