@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @you_are_home = true
+    cookies[:carousel_index] = 0
   end
   
   def scroll_to_top

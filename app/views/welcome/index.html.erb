@@ -10,7 +10,7 @@
 
 <div class="section_part" id="projects_section">
   Projects
-  <%= render "posts/carousel", images: Post.all %>
+  <%= render "posts/carousel", images: Post.limit(4).offset(0) %>
 </div>
 
 <div class="section_part" id="clients_section">
