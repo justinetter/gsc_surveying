@@ -16,7 +16,16 @@ class PostsController < ApplicationController
     end
     # gets images
     @images = Post.limit(@carousel_size).offset(cookies[:carousel_index].to_i)
-    puts @images.first.id.to_s + " " + @images.last.id.to_s
+    # carousel image to insert with ids
+    if @direction == "right"
+      @image = @images.last
+      @image_id = "last_carousel_image"
+      @image_to_remove ="first_coursel_image" 
+    else
+      @image = @images.first
+      @image_id = "first_coursel_image"
+      @image_to_remove = "last_carousel_image"
+    end
   end
   
   def new

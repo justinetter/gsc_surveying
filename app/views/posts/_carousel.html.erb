@@ -1,6 +1,7 @@
 <div class="image_carousel">
-  <%= link_to "<", carousel_scroll_path(direction: :left), remote: true, class: :top_left_link %>
-  <%= link_to ">", carousel_scroll_path(direction: :right), remote: true, class: :bottom_right_link %>
+  <%= link_to "<", carousel_scroll_path(direction: :left), remote: true, class: "top_left_link carousel_link" %>
+  <%= link_to ">", carousel_scroll_path(direction: :right), remote: true, class: "bottom_right_link carousel_link" %>
+  <div class="carousel_hider_left"></div><div class="carousel_hider_right"></div>
   <div id="carousel_images_anchor"></div>
   <%= render "posts/carousel_images", images: images %>
 </div>

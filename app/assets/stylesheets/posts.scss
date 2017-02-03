@@ -4,15 +4,35 @@
 
 .image_carousel {
   position: relative;
-  padding: 15px 7.5px;
   background: white;
   max-width: 550px;
   margin: 0 auto;
-  margin-bottom: 12.5px;
   width: 94.5%;
 }
 
 .carousel_image {
   position: relative;
   width: 100px;
+}
+
+.carousel_link {
+  z-index: 2;
+}
+
+.carousel_hider_left {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 50px;
+  background: white;
+}
+
+.carousel_hider_right {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+  width: 50px;
+  background: white;
 }
