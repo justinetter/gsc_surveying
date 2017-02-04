@@ -12,6 +12,10 @@ gem 'remotipart'
 # fonts and glyphs
 gem 'font-awesome-sass'
 
+# user agent detection
+gem 'useragent'
+gem 'browser'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
