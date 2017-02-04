@@ -65,6 +65,15 @@ textarea {
 	font-size: 12.5px;
 }
 
+@media screen and (max-width: 975px) {
+  .nav_bar {
+    visibility: hidden;
+  }
+  #toggle_menu_link {
+    visibility: visible;
+  }
+}
+
 .nav_bar {
   position: fixed;
   background: white;

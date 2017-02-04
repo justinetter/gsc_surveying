@@ -9,11 +9,8 @@
 </head>
 <body>
 
-<% if mobile? %>
-  <%= render "app/nav_menu" %>
-<% else %>
-  <%= render "app/nav_bar" %>
-<% end %>
+<%= render "app/nav_menu" %>
+<%= render "app/nav_bar" %>
 
 <%= yield %>
 
