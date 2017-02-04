@@ -19,12 +19,12 @@ class PostsController < ApplicationController
     # carousel image to insert with ids
     if @direction == "right"
       @image = @images.last
-      @image_id = "last_carousel_image"
-      @image_to_remove ="first_coursel_image" 
-    else
+      @point_to_add = "last"
+      @point_to_remove ="first"
+    elsif @direction == "left"
       @image = @images.first
-      @image_id = "first_coursel_image"
-      @image_to_remove = "last_carousel_image"
+      @point_to_add = "first"
+      @point_to_remove = "last"
     end
   end
   

@@ -1,8 +1,17 @@
-$("#<%= @image_id %>").after("<%=j render "posts/carousel_image", image: @image.image, id: @image_id %>");
+$(".carousel_image").<%= @point_to_add %>().after("<%=j render "posts/carousel_image", image: @image.image, id: @image_id %>");
 
 $("#carousel_images").animate(
   { width: 500 },
   { duration: 1000 }
 );
 
-$("#<%= @image_to_remove %>").remove();
+$(".carousel_image").<%= @point_to_remove %>().remove();
+
+// waits to remove until image hidden by carousel_hider
+function wait(ms){
+  var start = new Date().getTime();
+  var end = start;
+  while(end < start + ms) {
+    end = new Date().getTime();
+  }
+}

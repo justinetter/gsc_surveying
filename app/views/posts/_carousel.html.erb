@@ -4,10 +4,8 @@
   <div class="carousel_hider_left"></div><div class="carousel_hider_right"></div>
   <div id="carousel_images_anchor"></div>
   <div id="carousel_images">
-    <% i=0; for image in images %>
-      <% carousel_image_id = i.zero? ? "first_coursel_image" : (i.eql?(images.size-1) ? "last_carousel_image" : "") %>
-      <%= render "posts/carousel_image", image: image.image, id: carousel_image_id %>
-      <% i += 1 %>
+    <% for image in images %>
+      <%= render "posts/carousel_image", image: image.image %>
     <% end %>
   </div>
 </div>
