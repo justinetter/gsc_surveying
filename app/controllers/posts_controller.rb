@@ -10,9 +10,9 @@ class PostsController < ApplicationController
     end
     # keeps within limits
     if cookies[:carousel_index].to_i > Post.all.size - @carousel_size
-      cookies[:carousel_index] = Post.all.size - @carousel_size
-    elsif cookies[:carousel_index].to_i < 0
       cookies[:carousel_index] = 0
+    elsif cookies[:carousel_index].to_i < 0
+      cookies[:carousel_index] = Post.all.size - @carousel_size
     end
     # gets images
     @images = Post.limit(@carousel_size).offset(cookies[:carousel_index].to_i)
