@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   post 'sessions/create', as: 'sessions'
   delete 'sessions/destroy'
   delete 'sessions/destroy_all_other_sessions', as: 'destroy_all_other_sessions'
+  
+  # pages
+  get 'pages/toggle_menu', as: 'toggle_menu'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
