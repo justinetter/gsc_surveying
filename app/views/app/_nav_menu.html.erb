@@ -10,7 +10,7 @@
   <div id="nav_menu" hidden>
     <% for section in ["Services", "About Us", "Projects", "Clients", "Contact Us"] %>
       <% section_id = section.downcase.gsub(" ", "_") + "_section" %>
-      <%= link_to fa_icon("sign-out", section), focus_to_section_path(section_id: section_id, close_menu: "1"),
+      <%= link_to section, focus_to_section_path(section_id: section_id, close_menu: "1"),
         remote: true, class: :standard_nav_menu_link %>
     <% end %>
   
