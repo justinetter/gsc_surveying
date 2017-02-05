@@ -69,7 +69,7 @@ textarea {
   .nav_bar {
     visibility: hidden;
   }
-  #toggle_menu_link {
+  .nav_menu {
     visibility: visible;
   }
 }
@@ -86,6 +86,12 @@ textarea {
 
 .nav_spacing {
   height: 65px;
+}
+
+.nav_menu_logo {
+  height: 50px;
+  padding-top: 7px;
+  padding-left: 95px;
 }
 
 .nav_logo {

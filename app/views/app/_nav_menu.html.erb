@@ -1,14 +1,21 @@
-<%= link_to '<i class="fa fa-bars fa-2x"></i>'.html_safe, toggle_menu_path,
-  id: :toggle_menu_link, remote: true, title: "Main menu" %>
-
-<div id="standard_nav_menu" hidden>
-  <%= link_to '<i class="fa fa-times"></i>'.html_safe, toggle_menu_path,
-    remote: true, class: :standard_nav_menu_link, align: :right, title: "Exit menu" %>
-  
-  <%= link_to fa_icon("home", "Home"), root_url, class: :standard_nav_menu_link %>
-  <% if current_user %>
-  	<%= link_to fa_icon("sign-out", "Log out"), sessions_destroy_path, method: :delete,
-  	  class: :standard_nav_menu_link, title: "Click here to destroy your cookie.",
-  	  data: { confirm: "Are you sure?" } %>
+<div class="nav_menu">
+  <%= link_to '<i class="fa fa-bars fa-2x"></i>'.html_safe, toggle_menu_path,
+    id: :toggle_menu_link, remote: true, title: "Main menu" %>
+    
+    
+  <%= link_to (@you_are_home ? scroll_to_top_path : root_url), remote: @you_are_home do %>
+    <%= image_tag "logo.png", class: :nav_menu_logo %>
   <% end %>
+
+  <div id="nav_menu" hidden>
+    <%= link_to '<i class="fa fa-times"></i>'.html_safe, toggle_menu_path,
+      remote: true, class: :standard_nav_menu_link, align: :right, title: "Exit menu" %>
+    
+    <%= link_to fa_icon("home", "Home"), root_url, class: :standard_nav_menu_link %>
+    <% if current_user %>
+    	<%= link_to fa_icon("sign-out", "Log out"), sessions_destroy_path, method: :delete,
+    	  class: :standard_nav_menu_link, title: "Click here to destroy your cookie.",
+    	  data: { confirm: "Are you sure?" } %>
+    <% end %>
+  </div>
 </div>
