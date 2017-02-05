@@ -189,27 +189,89 @@ textarea {
 
 .google_maps {
   position: absolute;
-  right: 100px;
+  right: 15px;
   bottom: 55px;
 }
 
 .facebook_icon {
   position: absolute; 
   right: 620px;
-  bottom: 255px;
+  bottom: 300px;
 }
 
 .twitter_icon {
   position: absolute;
   right: 510px;
-  bottom: 255px;
+  bottom: 300px;
+}
+
+.instagram_icon {
+  position: absolute;
+  right: 565px;
+  bottom: 300px;
+}
+
+//wrench//
+.gsc_construction_icon {
+  position: relative;
+  top:20px;
+  left: 80px;
+  float: left;
+}
+
+//cube//
+.gsc_3d_modelling_icon {
+  position: relative;
+  top: 20px;
+  left: 250px;
+  float: left;
+}
+
+//gps//
+.gsc_gps_icon {
+  position: relative;
+  top: 20px;
+  left: 360px;
+  float: left;
+}
+
+//circle depth//
+.gsc_survey_icon {
+  position: relative;
+  float: left;
+  top: 20px;
+  left: 180px;
+}
+
+//conect dots//
+.gsc_control_survey_icon {
+  position: relative;
+  top: 5px;
+  left: 135px;
+  float: left;
+}
+
+//ruler//
+.location_survey_icon {
+  top: 200px;
+  right: 40px;
+  position: relative;
+  float: left;
+}
+
+//other//
+.other_alt_icon {
+  top: 10px;
+  left: 515px;
+  position: relative;
+  float: left;
 }
 
 .company_emails {
   position: absolute;
   width: 250px;
-  right: 580px;
-  bottom: 2px;
+  right: 500px;
+  bottom: 10px;
 }
 
 #services_section {
@@ -217,7 +279,6 @@ textarea {
 }
 
 #about_us_section {
-  background-color: DarkBlue;
 }
 
 #projects_section {
