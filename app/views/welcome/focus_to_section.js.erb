@@ -1,3 +1,7 @@
+<% if @close_menu.eql? "1" %>
+  $("#nav_menu").fadeOut();
+<% end %>
+
 $('html,body').animate({
    scrollTop: $("#<%= @section_id %>").offset().top - 125
 });

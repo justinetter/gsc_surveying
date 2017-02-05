@@ -9,5 +9,6 @@ class WelcomeController < ApplicationController
   
   def focus_to_section
     @section_id = params[:section_id]
+    @close_menu = params[:close_menu]
   end
 end
