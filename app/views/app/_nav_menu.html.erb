@@ -8,10 +8,12 @@
   <% end %>
 
   <div id="nav_menu" hidden>
-    <%= link_to '<i class="fa fa-times"></i>'.html_safe, toggle_menu_path,
-      remote: true, class: :standard_nav_menu_link, align: :right, title: "Exit menu" %>
-    
-    <%= link_to fa_icon("home", "Home"), root_url, class: :standard_nav_menu_link %>
+    <% for section in ["Services", "About Us", "Projects", "Clients", "Contact Us"] %>
+      <% section_id = section.downcase.gsub(" ", "_") + "_section" %>
+      <%= link_to fa_icon("sign-out", section), focus_to_section_path(section_id: section_id),
+        remote: true, class: :standard_nav_menu_link %>
+    <% end %>
+  
     <% if current_user %>
     	<%= link_to fa_icon("sign-out", "Log out"), sessions_destroy_path, method: :delete,
     	  class: :standard_nav_menu_link, title: "Click here to destroy your cookie.",
